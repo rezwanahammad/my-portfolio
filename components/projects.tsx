@@ -8,40 +8,59 @@ import {
   SiExpress,
   SiMongodb,
   SiFirebase,
+  SiAndroidstudio,
 } from "react-icons/si";
 
 export default function Projects() {
   return (
-    <section className="max-w-6xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white">
+    <section
+      id="projects"
+      className="max-w-6xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white"
+    >
       <h2 className="text-3xl font-semibold mb-12 text-center text-red-500">
         Projects
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <ProjectCard
-          title="Foodi"
-          description="A food delivery platform with ReactJS admin panel and ExpressJS backend services."
-          image="/images/foodi.png" // replace with your project image path
-          link="https://yourprojectlink.com"
+          title="BanglaOdyssey"
+          description="A modern and visually appealing Next.js web app that showcases the beauty, culture, and administrative structure of Bangladesh. It features all 8 divisions and their respective 64 districts, along with an interactive map and engaging UI."
+          image="/bangla.png" // replace with your project image path
+          link="https://github.com/rezwanahammad/banglaodyssey"
           techs={[
-            { icon: <SiReact className="text-blue-400" />, name: "React" },
             { icon: <SiNextdotjs className="text-white" />, name: "Next.js" },
-            { icon: <SiExpress className="text-gray-300" />, name: "Express" },
             { icon: <SiMongodb className="text-green-500" />, name: "MongoDB" },
           ]}
         />
 
         <ProjectCard
-          title="Another Project"
-          description="Short description of another project."
-          image="/images/another.png"
-          link="https://anotherproject.com"
+          title="Edusity"
+          description="An educational platform that allows users to create, share, and discover courses."
+          image="/edusity.png"
+          link="https://github.com/rezwanahammad/edusity_clone"
           techs={[
             {
               icon: <SiFirebase className="text-yellow-500" />,
               name: "Firebase",
             },
             { icon: <SiReact className="text-blue-400" />, name: "React" },
+          ]}
+        />
+
+        <ProjectCard
+          title="NewsBit"
+          description="A news aggregation android app that provides the latest news from various sources."
+          image="/newsbit.png"
+          link="https://github.com/rezwanahammad/NewsBit"
+          techs={[
+            {
+              icon: <SiAndroidstudio className="text-yellow-500" />,
+              name: "Android Studio",
+            },
+            {
+              icon: <SiFirebase className="text-yellow-500" />,
+              name: "Firebase",
+            },
           ]}
         />
       </div>

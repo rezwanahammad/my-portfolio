@@ -11,6 +11,7 @@ import {
   FaBriefcase,
   FaEnvelope,
   FaGraduationCap,
+  FaCameraRetro,
 } from "react-icons/fa";
 
 export default function Navbar() {
@@ -52,7 +53,7 @@ export default function Navbar() {
         </a>
       </Link>
 
-      <Link href="/projects" legacyBehavior>
+      <Link href="/#projects" legacyBehavior>
         <a className="group flex items-center space-x-2">
           <FaBook className="text-2xl cursor-pointer hover:text-red-500" />
           <span className="opacity-0 group-hover:opacity-100 transition text-md">
@@ -61,11 +62,20 @@ export default function Navbar() {
         </a>
       </Link>
 
-      <Link href="/resume" legacyBehavior>
+      <Link href="/#achievements" legacyBehavior>
         <a className="group flex items-center space-x-2">
           <FaFileAlt className="text-2xl cursor-pointer hover:text-red-500" />
           <span className="opacity-0 group-hover:opacity-100 transition text-md">
-            Resume
+            Achievements
+          </span>
+        </a>
+      </Link>
+
+      <Link href="/#photography" legacyBehavior>
+        <a className="group flex items-center space-x-2">
+          <FaCameraRetro className="text-2xl cursor-pointer hover:text-red-500" />
+          <span className="opacity-0 group-hover:opacity-100 transition text-md">
+            Photography
           </span>
         </a>
       </Link>
