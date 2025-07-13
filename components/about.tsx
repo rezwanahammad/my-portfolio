@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Cover } from "./ui/cover";
 
 export default function About() {
   return (
@@ -10,7 +11,10 @@ export default function About() {
     >
       {/* About Me on Left */}
       <div className="flex flex-col space-y-6 md:w-1/2">
-        <h2 className="text-3xl text-red-500 font-semibold mb-3">About Me</h2>
+        <h2 className="text-5xl font-bold mb-12 text-left bg-gradient-to-r from-[#7FFFD4] to-[#20B2AA] bg-clip-text text-transparent">
+          About me
+        </h2>
+
         <p className="text-gray-300 leading-relaxed">
           I am a passionate software developer specializing in Front-End
           development with React and Next.js. I love crafting beautiful,
@@ -24,10 +28,11 @@ export default function About() {
 
       {/* Personal Info on Right */}
       <div className="md:w-1/2">
-        <div className="bg-black border border-red-500 p-6 rounded-lg shadow-md transition duration-300 ">
-          <h2 className="text-2xl font-semibold mb-4 text-red-500 hover:text-white transition">
+        <div className="bg-black border-[1px] border-[#20B2AA] p-6 rounded-lg shadow-md transition duration-300">
+          <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent transition">
             Personal Information
           </h2>
+
           <ul className="text-gray-300 space-y-2 hover:text-white transition">
             <li>
               <strong>Name:</strong> Rezwan Ahammad Raad

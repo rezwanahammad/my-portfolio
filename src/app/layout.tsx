@@ -8,6 +8,7 @@ export const metadata = {
 };
 
 import { ReactNode } from "react";
+import Footer from "../../components/footer";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <BackgroundLines className="fixed inset-0 z-[-1]" />
         {children}
       </body>
+      <Footer />
     </html>
   );
 }

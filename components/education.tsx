@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { CardSpotlight } from "./ui/card-spotlight";
+import { Cover } from "./ui/cover";
 
 export default function Education() {
   return (
@@ -10,16 +11,16 @@ export default function Education() {
       id="Education"
       className="max-w-5xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white"
     >
-      <h2 className="text-3xl font-semibold mb-12 text-center text-red-500">
+      <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Education
       </h2>
 
       <div className="relative flex flex-col items-center">
         {/* Vertical timeline line */}
-        <div className="absolute w-1 bg-gradient-to-b from-red-600 via-red-700 to-red-900 rounded-full h-full shadow-md"></div>
+        <div className="absolute w-1 bg-gradient-to-b from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] rounded-full h-full shadow-md"></div>
 
         {/* Dot for University */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-40 bg-red-500 border-4 border-black rounded-full w-8 h-8 z-10 flex items-center justify-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-40 bg-[#20B2AA] border-4 border-black rounded-full w-8 h-8 z-10 flex items-center justify-center">
           <div className="bg-white rounded-full w-3 h-3"></div>
         </div>
 
@@ -49,7 +50,7 @@ export default function Education() {
         </div>
 
         {/* Dot for College */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-125 bg-red-500 border-4 border-black rounded-full w-8 h-8 z-10 flex items-center justify-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-125 bg-[#20B2AA] border-4 border-black rounded-full w-8 h-8 z-10 flex items-center justify-center">
           <div className="bg-white rounded-full w-3 h-3"></div>
         </div>
 
@@ -81,7 +82,7 @@ export default function Education() {
         </div>
 
         {/* Dot for School */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 top-[52rem] bg-red-500 border-4 border-black rounded-full w-8 h-8 z-10 flex items-center justify-center">
+        <div className="absolute left-1/2 transform -translate-x-1/2 top-[52rem] bg-[#20B2AA] border-4 border-black rounded-full w-8 h-8 z-10 flex items-center justify-center">
           <div className="bg-white rounded-full w-3 h-3"></div>
         </div>
 

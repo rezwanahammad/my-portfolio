@@ -7,6 +7,7 @@ import {
   FaLinkedin,
   FaFacebook,
   FaDev,
+  FaWhatsapp,
 } from "react-icons/fa";
 import Navbar from "./navbar";
 import { Typewriter } from "react-simple-typewriter";
@@ -20,7 +21,7 @@ export default function Landing() {
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center text-center px-4 py-12 md:py-24">
         {/* Profile image */}
-        <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-4 border-red-500">
+        <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-4 border-[#20B2AA]">
           <Image
             src="/raadnorm3.jpg"
             alt="Profile"
@@ -31,7 +32,10 @@ export default function Landing() {
         </div>
 
         <h1 className="text-3xl md:text-5xl font-bold mb-2">
-          Hi, I’m <span className="text-red-500">Raad</span>
+          Hi, I’m{" "}
+          <span className="bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
+            Raad
+          </span>
         </h1>
 
         <h2 className="text-xl md:text-2xl font-semibold mb-4">
@@ -66,7 +70,7 @@ export default function Landing() {
         <div className="flex items-center space-x-4">
           <a
             href="/CV_Raad.pdf"
-            className="bg-red-500 px-4 py-2 rounded flex items-center space-x-2"
+            className="bg-[#20B2AA] px-4 py-2 rounded flex items-center space-x-2"
             download
           >
             <FaDownload /> <span>CV</span>
@@ -94,6 +98,15 @@ export default function Landing() {
             title="Facebook"
           >
             <FaFacebook className="text-2xl cursor-pointer" />
+          </a>
+
+          <a
+            href="https://web.whatsapp.com/send?phone=8801714653351"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="WhatsApp"
+          >
+            <FaWhatsapp className="text-2xl cursor-pointer" />
           </a>
         </div>
       </div>

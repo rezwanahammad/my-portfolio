@@ -35,7 +35,7 @@ export default function Skills() {
       id="skills"
       className="max-w-6xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white"
     >
-      <h2 className="text-3xl font-semibold mb-12 text-center text-red-500">
+      <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Skills
       </h2>
 

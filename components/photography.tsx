@@ -21,10 +21,10 @@ export default function Photography() {
       id="photography"
       className="max-w-6xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white"
     >
-      <h2 className="text-3xl font-semibold mb-4 text-center text-red-500">
-        Photography
+      <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
+        Photography{" "}
       </h2>
-      <p className="text-center mb-12 text-gray-300">
+      <p className="text-center mb-12 text-gray-300 text-xl">
         Besides study,I love to capture the beauty around me.Whenever something
         attracts my eye,I take out my phone and capture it as memory. Here are
         the few captures of mine:

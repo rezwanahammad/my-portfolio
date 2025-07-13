@@ -36,10 +36,10 @@ export default function Contact() {
       <div className="flex flex-col md:flex-row gap-12">
         {/* Left side: heading + text */}
         <div className="md:w-1/3 flex flex-col justify-center">
-          <h2 className="text-4xl font-semibold mb-6 text-red-500">
+          <h2 className="text-5xl font-semibold mb-12 text-left bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
             Contact Me
           </h2>
-          <p className="text-gray-300">
+          <p className="text-gray-300 text-xl">
             Feel free to reach out for collaborations, project discussions, or
             opportunities.
           </p>
