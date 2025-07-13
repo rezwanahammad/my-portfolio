@@ -80,14 +80,14 @@ export default function Navbar() {
         </a>
       </Link>
 
-      <Link href="/experience" legacyBehavior>
+      {/* <Link href="/experience" legacyBehavior>
         <a className="group flex items-center space-x-2">
           <FaBriefcase className="text-2xl cursor-pointer hover:text-red-500" />
           <span className="opacity-0 group-hover:opacity-100 transition text-md">
             Experience
           </span>
         </a>
-      </Link>
+      </Link> */}
 
       <Link href="/contact" legacyBehavior>
         <a className="group flex items-center space-x-2">
