@@ -14,20 +14,20 @@ export default function Photography() {
       </h2>
 
       <p className="text-center text-gray-300 mb-12 max-w-3xl mx-auto">
-        Photography has always been my creative escape. In my free time, I love
-        capturing the world around me through my lens, finding beauty in simple
-        moments.
+        Besides study,I love to capture the beauty around me.Whenever something
+        attracts my eye,I take out my phone and capture it as memory. Here are
+        the few captures of mine:
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <PhotoCard image="/pic1.jpg" />
-        <PhotoCard image="/photography/photo2.jpg" />
-        <PhotoCard image="/photography/photo3.jpg" />
-        <PhotoCard image="/photography/photo4.jpg" />
-        <PhotoCard image="/photography/photo5.jpg" />
-        <PhotoCard image="/photography/photo6.jpg" />
-        <PhotoCard image="/photography/photo7.jpg" />
-        <PhotoCard image="/photography/photo8.jpg" />
+        <PhotoCard image="/pic2.jpg" />
+        <PhotoCard image="/pic3.jpg" />
+        <PhotoCard image="/pic4.jpg" />
+        <PhotoCard image="/pic5.jpg" />
+        <PhotoCard image="/pic6.jpg" />
+        <PhotoCard image="/pic7.jpg" />
+        <PhotoCard image="/pic8.jpg" />
         {/* Add more photos as needed */}
       </div>
     </section>
