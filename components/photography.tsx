@@ -6,14 +6,14 @@ import Tilt from "react-parallax-tilt";
 
 export default function Photography() {
   const photos = [
-    "/pic1.jpg",
-    "/pic2.jpg",
-    "/pic3.jpg",
-    "/pic4.jpg",
-    "/pic5.jpg",
-    "/pic6.jpg",
-    "/pic7.jpg",
-    "/pic8.jpg",
+    "/Pic1.jpg",
+    "/Pic2.jpg",
+    "/Pic3.jpg",
+    "/Pic4.jpg",
+    "/Pic5.jpg",
+    "/Pic6.jpg",
+    "/Pic7.jpg",
+    "/Pic8.jpg",
   ];
 
   return (
