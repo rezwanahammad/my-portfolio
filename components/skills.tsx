@@ -26,6 +26,12 @@ import {
   SiNumpy,
   SiPandas,
   SiAndroidstudio,
+  SiMongoose,
+  SiShadcnui,
+  SiReactbootstrap,
+  SiKaggle,
+  SiNotion,
+  SiVercel,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -38,6 +44,9 @@ export default function Skills() {
       <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Skills
       </h2>
+      <p className="text-center text-lg mb-12">
+        Here are some of the technologies and tools I work with:
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Frontend Development */}
@@ -73,6 +82,14 @@ export default function Skills() {
             <SkillIcon
               icon={<SiTailwindcss className="text-cyan-400 text-5xl" />}
               name="Tailwind"
+            />
+            <SkillIcon
+              icon={<SiReactbootstrap className="text-purple-500 text-5xl" />}
+              name="React Bootstrap"
+            />
+            <SkillIcon
+              icon={<SiShadcnui className="text-purple-500 text-5xl" />}
+              name="Shadcn UI"
             />
           </div>
         </div>
@@ -124,6 +141,10 @@ export default function Skills() {
               icon={<SiPrisma className="text-purple-500 text-5xl" />}
               name="Prisma"
             />
+            <SkillIcon
+              icon={<SiMongoose className="text-green-500 text-5xl" />}
+              name="Mongoose"
+            />
           </div>
         </div>
 
@@ -153,6 +174,10 @@ export default function Skills() {
               icon={<SiPandas className="text-green-500 text-5xl" />}
               name="Pandas"
             />
+            <SkillIcon
+              icon={<SiKaggle className="text-blue-500 text-5xl" />}
+              name="Kaggle"
+            />
           </div>
         </div>
 
@@ -170,13 +195,21 @@ export default function Skills() {
               icon={<SiGithub className="text-white text-5xl" />}
               name="GitHub"
             />
+            <SkillIcon
+              icon={<SiNotion className="text-gray-500 text-5xl" />}
+              name="Notion"
+            />
+            <SkillIcon
+              icon={<SiVercel className="text-black text-5xl" />}
+              name="Vercel"
+            />
           </div>
         </div>
 
         {/* Mobile Development */}
         <div className="bg-gray-900 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50">
           <h3 className="text-xl font-bold mb-4 text-center text-pink-400">
-            Mobile Development
+            App Development
           </h3>
           <div className="grid grid-cols-3 gap-4 justify-items-center">
             <SkillIcon

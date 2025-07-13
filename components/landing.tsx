@@ -8,7 +8,10 @@ import {
   FaFacebook,
   FaDev,
   FaWhatsapp,
+  FaInstagram,
 } from "react-icons/fa";
+
+import { SiNotion } from "react-icons/si";
 import Navbar from "./navbar";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -60,10 +63,10 @@ export default function Landing() {
         </p> */}
 
         <p className="max-w-xl mx-auto mb-8">
-          Computer Science & Engineering student at KUET with expertise in C,
-          C++, Java, JavaScript, and modern frameworks like React, Next.js, and
-          React Native. Dedicated to building impactful solutions through code.
-          Always learning, always building.
+          Computer Science & Engineering student with expertise in C, C++,
+          python, Java, JavaScript, and modern frameworks like React, Next.js,
+          and React Native. Dedicated to building impactful solutions through
+          code. Always learning, always building.
         </p>
 
         {/* Buttons and icons */}
@@ -101,12 +104,30 @@ export default function Landing() {
           </a>
 
           <a
+            href="https://www.instagram.com/__raaaaaaaaad/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Instagram"
+          >
+            <FaInstagram className="text-2xl cursor-pointer" />
+          </a>
+
+          <a
             href="https://web.whatsapp.com/send?phone=8801714653351"
             target="_blank"
             rel="noopener noreferrer"
             title="WhatsApp"
           >
             <FaWhatsapp className="text-2xl cursor-pointer" />
+          </a>
+
+          <a
+            href="https://www.notion.so/42e97bff94ed441b9f7c57868799b86f"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Notion"
+          >
+            <SiNotion className="text-2xl cursor-pointer" />
           </a>
         </div>
       </div>

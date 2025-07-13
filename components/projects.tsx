@@ -20,6 +20,9 @@ export default function Projects() {
       <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Projects
       </h2>
+      <p className="text-center text-lg mb-12">
+        Here are some of the projects I have worked on recently:
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <PinContainer
@@ -28,7 +31,7 @@ export default function Projects() {
         >
           <ProjectContent
             title="BanglaOdyssey"
-            description="A modern and visually appealing Next.js web app that showcases the beauty, culture, and administrative structure of Bangladesh. It features all 8 divisions and their respective 64 districts, along with an interactive map and engaging UI."
+            description="A modern and visually appealing Next.js web app that showcases the beauty of Bangladesh. "
             image="/bangla.png"
             techs={[
               { icon: <SiNextdotjs />, name: "Next.js" },
