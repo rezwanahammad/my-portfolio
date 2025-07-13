@@ -4,7 +4,19 @@ import React from "react";
 import emailjs from "emailjs-com";
 
 export default function Contact() {
-  const sendEmail = (e) => {
+  interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
+    target: HTMLFormElement;
+  }
+
+  interface EmailJSResult {
+    text: string;
+  }
+
+  interface EmailJSError {
+    text: string;
+  }
+
+  const sendEmail = (e: SendEmailEvent): void => {
     e.preventDefault();
 
     emailjs
@@ -15,11 +27,11 @@ export default function Contact() {
         "_OKOT9pzv6N3ZjQzX" // replace with your EmailJS public key
       )
       .then(
-        (result) => {
+        (result: EmailJSResult) => {
           console.log(result.text);
           alert("Message sent successfully!");
         },
-        (error) => {
+        (error: EmailJSError) => {
           console.log(error.text);
           alert("An error occurred. Please try again later.");
         }
