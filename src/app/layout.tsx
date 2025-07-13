@@ -19,7 +19,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body>
         <Navbar />
-        <BackgroundLines className="fixed inset-0 z-[-1]" />
+        <BackgroundLines className="fixed inset-0 z-[-1]">
+          {/* background lines have no children */}
+          <></>
+        </BackgroundLines>
         {children}
       </body>
       <Footer />
