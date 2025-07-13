@@ -1,17 +1,24 @@
 import "./globals.css";
 import Navbar from "../../components/navbar";
-import ParticleBackground from "../../components/particlebackground";
+import { BackgroundLines } from "../../components/ui/background-lines";
 
 export const metadata = {
   title: "Raad's Portfolio",
   description: "Computer Science Student",
 };
 
-export default function RootLayout({ children }) {
+import { ReactNode } from "react";
+
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body>
         <Navbar />
+        <BackgroundLines className="fixed inset-0 z-[-1]" />
         {children}
       </body>
     </html>
