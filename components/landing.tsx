@@ -10,21 +10,20 @@ import {
   FaWhatsapp,
   FaInstagram,
 } from "react-icons/fa";
-
 import { SiNotion } from "react-icons/si";
 import Navbar from "./navbar";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Landing() {
   return (
-    <div className="relative min-h-screen  text-white overflow-hidden">
+    <div className="relative min-h-screen text-white overflow-hidden">
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
       <div className="flex flex-col items-center justify-center text-center px-4 py-12 md:py-24">
         {/* Profile image */}
-        <div className="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-4 border-[#20B2AA]">
+        <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-56 rounded-full overflow-hidden mb-6 border-4 border-[#20B2AA]">
           <Image
             src="/raadnorm3.jpg"
             alt="Profile"
@@ -34,14 +33,14 @@ export default function Landing() {
           />
         </div>
 
-        <h1 className="text-3xl md:text-5xl font-bold mb-2">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-2">
           Hi, I’m{" "}
           <span className="bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
             Raad
           </span>
         </h1>
 
-        <h2 className="text-xl md:text-2xl font-semibold mb-4">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
           <Typewriter
             words={[
               "Computer Science Undergraduate",
@@ -58,19 +57,15 @@ export default function Landing() {
           />
         </h2>
 
-        {/* <p className="italic text-red-500 mb-6">
-          "Crafting Digital. Solving Problems. Delivering Value."
-        </p> */}
-
-        <p className="max-w-xl mx-auto mb-8">
+        <p className="max-w-xl mx-auto mb-8 text-sm sm:text-base">
           Computer Science & Engineering student with expertise in C, C++,
-          python, Java, JavaScript, and modern frameworks like React, Next.js,
+          Python, Java, JavaScript, and modern frameworks like React, Next.js,
           and React Native. Dedicated to building impactful solutions through
           code. Always learning, always building.
         </p>
 
         {/* Buttons and icons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-wrap justify-center items-center gap-4">
           <a
             href="/CV_Raad.pdf"
             className="bg-[#20B2AA] px-4 py-2 rounded flex items-center space-x-2"
@@ -102,7 +97,6 @@ export default function Landing() {
           >
             <FaFacebook className="text-2xl cursor-pointer" />
           </a>
-
           <a
             href="https://www.instagram.com/__raaaaaaaaad/"
             target="_blank"
@@ -111,7 +105,6 @@ export default function Landing() {
           >
             <FaInstagram className="text-2xl cursor-pointer" />
           </a>
-
           <a
             href="https://web.whatsapp.com/send?phone=8801714653351"
             target="_blank"
@@ -120,7 +113,6 @@ export default function Landing() {
           >
             <FaWhatsapp className="text-2xl cursor-pointer" />
           </a>
-
           <a
             href="https://www.notion.so/42e97bff94ed441b9f7c57868799b86f"
             target="_blank"
