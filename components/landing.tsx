@@ -39,6 +39,7 @@ export default function Landing() {
             words={[
               "Computer Science Undergraduate",
               "Full-Stack Developer",
+              "App Developer",
               "ML Enthusiast",
             ]}
             loop={true}

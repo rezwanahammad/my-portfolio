@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white"
+      className="max-w-7xl ml-37  p-6 mt-20 rounded-xl shadow-lg text-white"
     >
       <h2 className="text-3xl font-semibold mb-12 text-center text-red-500">
         Projects

@@ -16,7 +16,7 @@ import {
 
 export default function Navbar() {
   return (
-    <div className="fixed top-1/2 left-6 transform -translate-y-1/2 flex flex-col pl-2 text-xl space-y-8">
+    <div className="fixed top-1/2 left-4 transform -translate-y-1/2 flex flex-col pl-2 text-xl space-y-5">
       <Link href="/#landing" legacyBehavior>
         <a className="group flex items-center space-x-2">
           <FaHome className="text-3xl cursor-pointer hover:text-red-500" />
@@ -89,7 +89,7 @@ export default function Navbar() {
         </a>
       </Link> */}
 
-      <Link href="/contact" legacyBehavior>
+      <Link href="/#contact" legacyBehavior>
         <a className="group flex items-center space-x-2">
           <FaEnvelope className="text-2xl cursor-pointer hover:text-red-500" />
           <span className="opacity-0 group-hover:opacity-100 transition text-md">
