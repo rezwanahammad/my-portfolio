@@ -32,6 +32,8 @@ import {
   SiKaggle,
   SiNotion,
   SiVercel,
+  SiClerk,
+  SiDrizzle,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
 
@@ -51,58 +53,182 @@ export default function Skills() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {/* Frontend Development */}
-        <SkillCategory title="Frontend Development" color="text-red-400" hoverShadow="hover:shadow-red-500/50" skills={[
-          { icon: <SiHtml5 className="text-orange-500 text-5xl" />, name: "HTML" },
-          { icon: <SiCss3 className="text-blue-500 text-5xl" />, name: "CSS" },
-          { icon: <SiJavascript className="text-yellow-400 text-5xl" />, name: "JavaScript" },
-          { icon: <SiTypescript className="text-blue-600 text-5xl" />, name: "TypeScript" },
-          { icon: <SiReact className="text-blue-400 text-5xl" />, name: "React.js" },
-          { icon: <SiNextdotjs className="text-white text-5xl" />, name: "Next.js" },
-          { icon: <SiTailwindcss className="text-cyan-400 text-5xl" />, name: "Tailwind" },
-          { icon: <SiReactbootstrap className="text-purple-500 text-5xl" />, name: "React Bootstrap" },
-          { icon: <SiShadcnui className="text-purple-500 text-5xl" />, name: "Shadcn UI" },
-        ]} />
+        <SkillCategory
+          title="Frontend Development"
+          color="text-red-400"
+          hoverShadow="hover:shadow-red-500/50"
+          skills={[
+            {
+              icon: <SiHtml5 className="text-orange-500 text-5xl" />,
+              name: "HTML",
+            },
+            {
+              icon: <SiCss3 className="text-blue-500 text-5xl" />,
+              name: "CSS",
+            },
+            {
+              icon: <SiJavascript className="text-yellow-400 text-5xl" />,
+              name: "JavaScript",
+            },
+            {
+              icon: <SiTypescript className="text-blue-600 text-5xl" />,
+              name: "TypeScript",
+            },
+            {
+              icon: <SiReact className="text-blue-400 text-5xl" />,
+              name: "React.js",
+            },
+            {
+              icon: <SiNextdotjs className="text-white text-5xl" />,
+              name: "Next.js",
+            },
+            {
+              icon: <SiTailwindcss className="text-cyan-400 text-5xl" />,
+              name: "Tailwind",
+            },
+            {
+              icon: <SiReactbootstrap className="text-purple-500 text-5xl" />,
+              name: "React Bootstrap",
+            },
+            {
+              icon: <SiShadcnui className="text-purple-500 text-5xl" />,
+              name: "Shadcn UI",
+            },
+          ]}
+        />
 
         {/* Backend Development */}
-        <SkillCategory title="Backend Development" color="text-green-400" hoverShadow="hover:shadow-green-500/50" skills={[
-          { icon: <SiNodedotjs className="text-green-500 text-5xl" />, name: "Node.js" },
-          { icon: <SiExpress className="text-gray-200 text-5xl" />, name: "Express.js" },
-          { icon: <SiPostman className="text-orange-500 text-5xl" />, name: "Postman" },
-          { icon: <SiFastapi className="text-green-500 text-5xl" />, name: "FastAPI" },
-        ]} />
+        <SkillCategory
+          title="Backend Development"
+          color="text-green-400"
+          hoverShadow="hover:shadow-green-500/50"
+          skills={[
+            {
+              icon: <SiNodedotjs className="text-green-500 text-5xl" />,
+              name: "Node.js",
+            },
+            {
+              icon: <SiExpress className="text-gray-200 text-5xl" />,
+              name: "Express.js",
+            },
+            {
+              icon: <SiPostman className="text-orange-500 text-5xl" />,
+              name: "Postman",
+            },
+            {
+              icon: <SiFastapi className="text-green-500 text-5xl" />,
+              name: "FastAPI",
+            },
+            {
+              icon: <SiDrizzle className="text-blue-500 text-5xl" />,
+              name: "Drizzle ORM",
+            },
+            {
+              icon: <SiClerk className="text-blue-500 text-5xl" />,
+              name: "Clerk",
+            },
+          ]}
+        />
 
         {/* Databases */}
-        <SkillCategory title="Databases" color="text-yellow-400" hoverShadow="hover:shadow-yellow-500/50" skills={[
-          { icon: <SiMongodb className="text-green-500 text-5xl" />, name: "MongoDB" },
-          { icon: <SiFirebase className="text-yellow-500 text-5xl" />, name: "Firebase" },
-          { icon: <SiMysql className="text-blue-500 text-5xl" />, name: "MySQL" },
-          { icon: <SiPrisma className="text-purple-500 text-5xl" />, name: "Prisma" },
-          { icon: <SiMongoose className="text-green-500 text-5xl" />, name: "Mongoose" },
-        ]} />
+        <SkillCategory
+          title="Databases"
+          color="text-yellow-400"
+          hoverShadow="hover:shadow-yellow-500/50"
+          skills={[
+            {
+              icon: <SiMongodb className="text-green-500 text-5xl" />,
+              name: "MongoDB",
+            },
+            {
+              icon: <SiFirebase className="text-yellow-500 text-5xl" />,
+              name: "Firebase",
+            },
+            {
+              icon: <SiMysql className="text-blue-500 text-5xl" />,
+              name: "MySQL",
+            },
+            {
+              icon: <SiPrisma className="text-purple-500 text-5xl" />,
+              name: "Prisma",
+            },
+            {
+              icon: <SiMongoose className="text-green-500 text-5xl" />,
+              name: "Mongoose",
+            },
+          ]}
+        />
 
         {/* AI & ML */}
-        <SkillCategory title="AI & ML" color="text-purple-400" hoverShadow="hover:shadow-purple-500/50" skills={[
-          { icon: <SiPython className="text-yellow-400 text-5xl" />, name: "Python" },
-          { icon: <SiScikitlearn className="text-orange-400 text-5xl" />, name: "Scikit-learn" },
-          { icon: <SiTensorflow className="text-orange-500 text-5xl" />, name: "TensorFlow" },
-          { icon: <SiNumpy className="text-blue-500 text-5xl" />, name: "NumPy" },
-          { icon: <SiPandas className="text-green-500 text-5xl" />, name: "Pandas" },
-          { icon: <SiKaggle className="text-blue-500 text-5xl" />, name: "Kaggle" },
-        ]} />
+        <SkillCategory
+          title="AI & ML"
+          color="text-purple-400"
+          hoverShadow="hover:shadow-purple-500/50"
+          skills={[
+            {
+              icon: <SiPython className="text-yellow-400 text-5xl" />,
+              name: "Python",
+            },
+            {
+              icon: <SiScikitlearn className="text-orange-400 text-5xl" />,
+              name: "Scikit-learn",
+            },
+            {
+              icon: <SiTensorflow className="text-orange-500 text-5xl" />,
+              name: "TensorFlow",
+            },
+            {
+              icon: <SiNumpy className="text-blue-500 text-5xl" />,
+              name: "NumPy",
+            },
+            {
+              icon: <SiPandas className="text-green-500 text-5xl" />,
+              name: "Pandas",
+            },
+            {
+              icon: <SiKaggle className="text-blue-500 text-5xl" />,
+              name: "Kaggle",
+            },
+          ]}
+        />
 
         {/* DevOps */}
-        <SkillCategory title="DevOps" color="text-blue-400" hoverShadow="hover:shadow-blue-500/50" skills={[
-          { icon: <SiDocker className="text-blue-500 text-5xl" />, name: "Docker" },
-          { icon: <SiGithub className="text-white text-5xl" />, name: "GitHub" },
-          { icon: <SiNotion className="text-gray-500 text-5xl" />, name: "Notion" },
-          { icon: <SiVercel className="text-black text-5xl" />, name: "Vercel" },
-        ]} />
+        <SkillCategory
+          title="DevOps"
+          color="text-blue-400"
+          hoverShadow="hover:shadow-blue-500/50"
+          skills={[
+            {
+              icon: <SiDocker className="text-blue-500 text-5xl" />,
+              name: "Docker",
+            },
+            {
+              icon: <SiGithub className="text-white text-5xl" />,
+              name: "GitHub",
+            },
+            {
+              icon: <SiVercel className="text-black text-5xl" />,
+              name: "Vercel",
+            },
+          ]}
+        />
 
         {/* Mobile Development */}
-        <SkillCategory title="App Development" color="text-pink-400" hoverShadow="hover:shadow-pink-500/50" skills={[
-          { icon: <SiAndroid className="text-green-500 text-5xl" />, name: "Android Studio" },
-          { icon: <TbBrandReactNative className="text-blue-400 text-5xl" />, name: "React Native" },
-        ]} />
+        <SkillCategory
+          title="App Development"
+          color="text-pink-400"
+          hoverShadow="hover:shadow-pink-500/50"
+          skills={[
+            {
+              icon: <SiAndroid className="text-green-500 text-5xl" />,
+              name: "Android Studio",
+            },
+            {
+              icon: <TbBrandReactNative className="text-blue-400 text-5xl" />,
+              name: "React Native",
+            },
+          ]}
+        />
       </div>
     </section>
   );
@@ -113,12 +239,22 @@ type SkillIconProps = {
   name: string;
 };
 
-function SkillCategory({ title, color, hoverShadow, skills }: { title: string; color: string; hoverShadow: string; skills: SkillIconProps[] }) {
+function SkillCategory({
+  title,
+  color,
+  hoverShadow,
+  skills,
+}: {
+  title: string;
+  color: string;
+  hoverShadow: string;
+  skills: SkillIconProps[];
+}) {
   return (
-    <div className={`bg-gray-900 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-lg ${hoverShadow}`}>
-      <h3 className={`text-xl font-bold mb-4 text-center ${color}`}>
-        {title}
-      </h3>
+    <div
+      className={`bg-gray-900 p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-lg ${hoverShadow}`}
+    >
+      <h3 className={`text-xl font-bold mb-4 text-center ${color}`}>{title}</h3>
       <div className="grid grid-cols-3 gap-4 justify-items-center">
         {skills.map((skill, index) => (
           <SkillIcon key={index} icon={skill.icon} name={skill.name} />
@@ -134,7 +270,9 @@ function SkillIcon({ icon, name }: SkillIconProps) {
       <div className="group-hover:scale-110 transform transition duration-300 group-hover:animate-spin flex justify-center w-full">
         {icon}
       </div>
-      <span className="mt-2 block text-center w-full text-xs md:text-sm">{name}</span>
+      <span className="mt-2 block text-center w-full text-xs md:text-sm">
+        {name}
+      </span>
     </div>
   );
 }
