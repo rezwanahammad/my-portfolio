@@ -2,19 +2,19 @@
 
 Welcome to the source code of my personal portfolio website! This project showcases my skills, projects, and background as a Computer Science student and developer.
 
-## 🚀 Live Preview
+## Live Preview
 
-You can visit the live site here: https://my-portfolio-kkqh.vercel.app/
-## 📌 Features
+You can visit the live site here: [https://my-portfolio-kkqh.vercel.app/](https://rezwanraad.vercel.app/)
+## Features
 
-- 🧑‍💻 About Me section
-- 🛠️ Skills and Technologies
-- 📂 Projects with descriptions and links
-- 📞 Contact section
+-  About Me section
+-  Skills and Technologies
+-  Projects with descriptions and links
+-  Contact section
 - Responsive design for all screen sizes
 - Clean, modern UI with smooth navigation
 
-## 🛠️ Built With
+## Built With
 
 - **HTML5**
 - **CSS3**
@@ -24,7 +24,7 @@ You can visit the live site here: https://my-portfolio-kkqh.vercel.app/
 - **Google Fonts**
 - **Shadcn UI**
 
-## 📁 Folder Structure
+## Folder Structure
 
 ```plaintext
 my-portfolio/
