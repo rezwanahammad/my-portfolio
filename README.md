@@ -4,7 +4,7 @@ Welcome to the source code of my personal portfolio website! This project showca
 
 ## Live Preview
 
-You can visit the live site here: [https://my-portfolio-kkqh.vercel.app/](https://rezwanraad.vercel.app/)
+You can visit the live site here: (https://rezwanraad.vercel.app/)
 ## Features
 
 -  About Me section
