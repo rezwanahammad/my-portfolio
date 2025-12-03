@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import {
   SiReact,
@@ -11,7 +11,39 @@ import {
 } from "react-icons/si";
 import { PinContainer } from "./ui/3d-pin"; // update path if needed
 
+type Project = {
+  _id?: string;
+  title: string;
+  description?: string;
+  image?: string;
+  techs?: string[];
+  href?: string;
+};
+
 export default function Projects() {
+  const [projects, setProjects] = useState<Project[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let mounted = true;
+    fetch("/api/projects")
+      .then((res) => res.json())
+      .then((data) => {
+        if (!mounted) return;
+        if (data?.projects) setProjects(data.projects);
+        else setError("No projects returned from API");
+      })
+      .catch((err) => {
+        if (!mounted) return;
+        console.error(err);
+        setError("Failed to load projects");
+      });
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   return (
     <section
       id="projects"
@@ -25,50 +57,24 @@ export default function Projects() {
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <PinContainer
-          title="BanglaOdyssey"
-          href="https://github.com/rezwanahammad/banglaodyssey"
-        >
-          <ProjectContent
-            title="BanglaOdyssey"
-            description="A modern and visually appealing Next.js web app that showcases the beauty of Bangladesh. "
-            image="/bangla.png"
-            techs={[
-              { icon: <SiNextdotjs />, name: "Next.js" },
-              { icon: <SiMongodb />, name: "MongoDB" },
-            ]}
-          />
-        </PinContainer>
+        {error && <div className="text-red-400">{error}</div>}
 
-        <PinContainer
-          title="Edusity"
-          href="https://github.com/rezwanahammad/edusity_clone"
-        >
-          <ProjectContent
-            title="Edusity"
-            description="An educational platform that allows users to create, share, and discover courses."
-            image="/edusity.png"
-            techs={[
-              { icon: <SiFirebase />, name: "Firebase" },
-              { icon: <SiReact />, name: "React" },
-            ]}
-          />
-        </PinContainer>
+        {!projects && !error && <div className="text-center">Loading...</div>}
 
-        <PinContainer
-          title="NewsBit"
-          href="https://github.com/rezwanahammad/NewsBit"
-        >
-          <ProjectContent
-            title="NewsBit"
-            description="A news aggregation android app that provides the latest news from various sources."
-            image="/newsbit.png"
-            techs={[
-              { icon: <SiAndroidstudio />, name: "Android Studio" },
-              { icon: <SiFirebase />, name: "Firebase" },
-            ]}
-          />
-        </PinContainer>
+        {projects &&
+          projects.map((p) => (
+            <PinContainer key={p.title} title={p.title} href={p.href ?? "#"}>
+              <ProjectContent
+                title={p.title}
+                description={p.description ?? ""}
+                image={p.image ?? "/placeholder.png"}
+                techs={(p.techs ?? []).map((t) => ({
+                  icon: getIcon(t),
+                  name: t,
+                }))}
+              />
+            </PinContainer>
+          ))}
       </div>
     </section>
   );
@@ -78,7 +84,7 @@ type ProjectContentProps = {
   title: string;
   description: string;
   image: string;
-  techs: { icon: React.ReactNode; name: string }[];
+  techs: { icon: React.ReactNode | null; name: string }[];
 };
 
 function ProjectContent({
@@ -118,4 +124,14 @@ function ProjectContent({
       </button>
     </div>
   );
+}
+
+function getIcon(name: string) {
+  const key = name.toLowerCase();
+  if (key.includes("next")) return <SiNextdotjs />;
+  if (key.includes("react")) return <SiReact />;
+  if (key.includes("mongo")) return <SiMongodb />;
+  if (key.includes("firebase")) return <SiFirebase />;
+  if (key.includes("android")) return <SiAndroidstudio />;
+  return null;
 }
