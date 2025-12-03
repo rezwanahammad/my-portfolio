@@ -61,7 +61,7 @@ export default function Contact() {
         <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
           Contact Me
         </h2>
-        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
           Have a project in mind or want to collaborate? I'd love to hear from
           you. Drop me a message and I'll get back to you as soon as possible.
         </p>
@@ -89,11 +89,11 @@ export default function Contact() {
             {/* Name & Email Row */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Name
                 </label>
                 <div className="relative">
-                  <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                  <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
                   <input
                     type="text"
                     name="name"
@@ -105,11 +105,11 @@ export default function Contact() {
               </div>
 
               <div className="relative">
-                <label className="block text-sm font-medium text-gray-300 mb-2">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Email
                 </label>
                 <div className="relative">
-                  <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                  <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 dark:text-gray-500" />
                   <input
                     type="email"
                     name="email"
@@ -123,7 +123,7 @@ export default function Contact() {
 
             {/* Subject */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Subject
               </label>
               <input
@@ -131,13 +131,13 @@ export default function Contact() {
                 name="subject"
                 placeholder="Let's discuss a project"
                 required
-                className="w-full px-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-white placeholder-gray-500 backdrop-blur-sm"
+                className="w-full px-4 py-3 rounded-lg bg-white/60 dark:bg-gray-800/30 border border-gray-300 dark:border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 backdrop-blur-sm"
               />
             </div>
 
             {/* Message */}
             <div className="relative">
-              <label className="block text-sm font-medium text-gray-300 mb-2">
+              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                 Message
               </label>
               <textarea
@@ -145,7 +145,7 @@ export default function Contact() {
                 placeholder="Tell me about your project or idea..."
                 rows={6}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-white placeholder-gray-500 resize-none backdrop-blur-sm"
+                className="w-full px-4 py-3 rounded-lg bg-white/60 dark:bg-gray-800/30 border border-gray-300 dark:border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 resize-none backdrop-blur-sm"
               ></textarea>
             </div>
 

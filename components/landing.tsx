@@ -16,7 +16,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 export default function Landing() {
   return (
-    <div className="relative min-h-screen text-white overflow-hidden">
+    <div className="relative min-h-screen text-gray-900 dark:text-white overflow-hidden">
       {/* Navbar */}
       <Navbar />
 

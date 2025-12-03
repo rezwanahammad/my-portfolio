@@ -56,7 +56,7 @@ export default function Navbar() {
   return (
     <>
       {/* Desktop sidebar */}
-      <div className="fixed top-1/2 left-4 transform -translate-y-1/2 flex-col pl-2 text-xl space-y-5 hidden md:flex">
+      <div className="fixed top-1/2 left-4 transform -translate-y-1/2 flex-col pl-2 text-xl space-y-5 hidden md:flex text-gray-700 dark:text-gray-200">
         {navItems.map((item, index) => (
           <Link
             href={item.href}
@@ -66,7 +66,7 @@ export default function Navbar() {
             {React.cloneElement(item.icon, {
               className: `${item.icon.props.className} cursor-pointer hover:text-[#20B2AA]`,
             })}
-            <span className="opacity-0 group-hover:opacity-100 transition text-md">
+            <span className="opacity-0 group-hover:opacity-100 transition text-md text-gray-700 dark:text-gray-200">
               {item.label}
             </span>
           </Link>
@@ -77,16 +77,16 @@ export default function Navbar() {
       <div className="fixed top-4 left-4 md:hidden z-50">
         <button onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? (
-            <FaTimes className="text-3xl text-white" />
+            <FaTimes className="text-3xl text-gray-900 dark:text-white" />
           ) : (
-            <FaBars className="text-3xl text-white" />
+            <FaBars className="text-3xl text-gray-900 dark:text-white" />
           )}
         </button>
       </div>
 
       {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-8 text-2xl">
+        <div className="fixed top-0 left-0 w-full h-full bg-white dark:bg-black bg-opacity-95 dark:bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-8 text-2xl">
           {navItems.map((item, index) => (
             <Link
               href={item.href}

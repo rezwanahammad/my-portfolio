@@ -14,7 +14,7 @@ export default function About() {
           About me
         </h2>
 
-        <p className="text-gray-300 leading-relaxed text-sm md:text-base">
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm md:text-base">
           I am a passionate software developer specializing in Front-End
           development with React and Next.js. I love crafting beautiful,
           user-friendly websites and applications. My interests include
@@ -27,12 +27,12 @@ export default function About() {
 
       {/* Personal Info on Right */}
       <div className="w-full md:w-1/2 mt-8 md:mt-0">
-        <div className="bg-black border border-[#20B2AA] p-4 md:p-6 rounded-lg shadow-md transition duration-300">
+        <div className="bg-white dark:bg-black border border-[#20B2AA] p-4 md:p-6 rounded-lg shadow-md transition duration-300">
           <h2 className="text-xl md:text-2xl font-semibold mb-4 bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent transition">
             Personal Information
           </h2>
 
-          <ul className="text-gray-300 space-y-2 text-sm md:text-base">
+          <ul className="text-gray-700 dark:text-gray-300 space-y-2 text-sm md:text-base">
             <li>
               <strong>Name:</strong> Rezwan Ahammad Raad
             </li>

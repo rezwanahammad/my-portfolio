@@ -7,7 +7,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="max-w-6xl mx-auto p-4 md:p-6 mt-20 rounded-xl shadow-lg text-white"
+      className="max-w-6xl mx-auto p-4 md:p-6 mt-20 rounded-xl shadow-lg text-gray-900 dark:text-white"
     >
       <h2 className="text-3xl md:text-5xl font-semibold mb-8 md:mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Achievements & Certificates

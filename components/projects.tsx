@@ -47,7 +47,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto p-6 mt-20 mb-20 rounded-xl shadow-lg text-white"
+      className="max-w-7xl mx-auto p-6 mt-20 mb-20 rounded-xl shadow-lg text-gray-900 dark:text-white"
     >
       <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Projects
@@ -105,13 +105,15 @@ function ProjectContent({
       <h3 className="text-lg font-bold bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent mb-2">
         {title}
       </h3>
-      <p className="text-gray-400 text-sm mb-4">{description}</p>
+      <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+        {description}
+      </p>
 
       <div className="flex flex-wrap gap-2 mb-4">
         {techs.map((tech, index) => (
           <div
             key={index}
-            className="bg-gray-800 px-2 py-1 rounded-lg flex items-center space-x-1 text-xs"
+            className="bg-gray-200 dark:bg-gray-800 px-2 py-1 rounded-lg flex items-center space-x-1 text-xs"
           >
             {tech.icon}
             <span>{tech.name}</span>

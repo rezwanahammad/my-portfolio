@@ -19,12 +19,12 @@ export default function Photography() {
   return (
     <section
       id="photography"
-      className="max-w-6xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-white"
+      className="max-w-6xl mx-auto p-6 mt-20 rounded-xl shadow-lg text-gray-900 dark:text-white"
     >
       <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
-        Photography{" "}
+        Photography
       </h2>
-      <p className="text-center mb-12 text-gray-300 text-xl">
+      <p className="text-center mb-12 text-gray-700 dark:text-gray-300 text-xl">
         Besides study,I love to capture the beauty around me.Whenever something
         attracts my eye,I take out my phone and capture it as memory. Here are
         the few captures of mine:
