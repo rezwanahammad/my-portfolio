@@ -1,9 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import {
+  FaEnvelope,
+  FaUser,
+  FaPaperPlane,
+  FaCheckCircle,
+} from "react-icons/fa";
 
 export default function Contact() {
+  const [isSending, setIsSending] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+
   interface SendEmailEvent extends React.FormEvent<HTMLFormElement> {
     target: HTMLFormElement;
   }
@@ -18,90 +27,167 @@ export default function Contact() {
 
   const sendEmail = (e: SendEmailEvent): void => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .sendForm(
-        "service_jx6ense", // replace with your EmailJS service ID
-        "template_zoxuuqo", // replace with your EmailJS template ID
+        "service_jx6ense",
+        "template_zoxuuqo",
         e.target,
-        "_OKOT9pzv6N3ZjQzX" // replace with your EmailJS public key
+        "_OKOT9pzv6N3ZjQzX"
       )
       .then(
         (result: EmailJSResult) => {
           console.log(result.text);
-          alert("Message sent successfully!");
+          setShowSuccess(true);
+          setIsSending(false);
+          e.target.reset();
+          setTimeout(() => setShowSuccess(false), 5000);
         },
         (error: EmailJSError) => {
           console.log(error.text);
           alert("An error occurred. Please try again later.");
+          setIsSending(false);
         }
       );
-
-    e.target.reset();
   };
 
   return (
     <section
       id="contact"
-      className="max-w-6xl mx-auto px-4 md:px-6 py-12 mt-20 rounded-xl shadow-lg text-white"
+      className="max-w-6xl mx-auto px-4 md:px-6 py-16 mt-20 mb-20"
     >
-      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
-        {/* Left side: heading + text */}
-        <div className="md:w-1/3 flex flex-col justify-center mb-8 md:mb-0">
-          <h2 className="text-3xl md:text-5xl font-semibold mb-6 md:mb-12 text-left bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
-            Contact Me
-          </h2>
-          <p className="text-gray-300 text-base md:text-xl">
-            Feel free to reach out for collaborations, project discussions, or
-            opportunities.
-          </p>
-        </div>
+      <div className="text-center mb-16">
+        <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
+          Contact Me
+        </h2>
+        <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+          Have a project in mind or want to collaborate? I'd love to hear from
+          you. Drop me a message and I'll get back to you as soon as possible.
+        </p>
+      </div>
 
-        {/* Right side: form */}
-        <div className="md:w-2/3">
-          <form
-            onSubmit={sendEmail}
-            className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-6 md:p-8 rounded-xl shadow-2xl space-y-6"
-          >
-            <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+      <div className="relative">
+        {/* Success Message Overlay */}
+        {showSuccess && (
+          <div className="absolute inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm rounded-2xl">
+            <div className="bg-gradient-to-br from-green-900/90 to-emerald-900/90 p-8 rounded-2xl border border-green-500/50 shadow-2xl text-center transform animate-bounce">
+              <FaCheckCircle className="text-green-400 text-6xl mx-auto mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-2">
+                Message Sent!
+              </h3>
+              <p className="text-gray-300">
+                Thank you for reaching out. I'll get back to you soon.
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Form without background card */}
+        <div className="relative">
+          <form onSubmit={sendEmail} className="relative z-10 space-y-6">
+            {/* Name & Email Row */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Your Name
+                </label>
+                <div className="relative">
+                  <FaUser className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Rezwan Ahammad"
+                    required
+                    className="w-full pl-12 pr-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-white placeholder-gray-500 backdrop-blur-sm"
+                  />
+                </div>
+              </div>
+
+              <div className="relative">
+                <label className="block text-sm font-medium text-gray-300 mb-2">
+                  Your Email
+                </label>
+                <div className="relative">
+                  <FaEnvelope className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="rezwanahammad68@gmail.com"
+                    required
+                    className="w-full pl-12 pr-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-white placeholder-gray-500 backdrop-blur-sm"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Subject */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Subject
+              </label>
               <input
                 type="text"
-                name="name"
-                placeholder="Your Name"
+                name="subject"
+                placeholder="Let's discuss a project"
                 required
-                className="w-full p-3 rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 text-sm md:text-base"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your Email"
-                required
-                className="w-full p-3 rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 text-sm md:text-base"
+                className="w-full px-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-white placeholder-gray-500 backdrop-blur-sm"
               />
             </div>
 
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              required
-              className="w-full p-3 rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 text-sm md:text-base"
-            />
+            {/* Message */}
+            <div className="relative">
+              <label className="block text-sm font-medium text-gray-300 mb-2">
+                Message
+              </label>
+              <textarea
+                name="message"
+                placeholder="Tell me about your project or idea..."
+                rows={6}
+                required
+                className="w-full px-4 py-3 rounded-lg bg-gray-800/30 border border-gray-700/50 focus:border-[#40E0D0] focus:outline-none focus:ring-2 focus:ring-[#40E0D0]/50 transition duration-300 text-white placeholder-gray-500 resize-none backdrop-blur-sm"
+              ></textarea>
+            </div>
 
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={5}
-              required
-              className="w-full p-3 rounded-lg bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 text-sm md:text-base"
-            ></textarea>
-
-            <div className="text-center md:text-right">
+            {/* Submit Button */}
+            <div className="flex justify-center md:justify-end pt-4">
               <button
                 type="submit"
-                className="bg-blue-400 hover:bg-blue-500 text-white px-6 md:px-8 py-3 rounded-full font-semibold shadow-md transition duration-300 text-sm md:text-base"
+                disabled={isSending}
+                className="group relative px-8 py-4 bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] text-black font-bold rounded-full shadow-lg hover:shadow-[#40E0D0]/50 hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               >
-                Send Message
+                <span className="flex items-center gap-3">
+                  {isSending ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      Send Message
+                      <FaPaperPlane className="group-hover:translate-x-1 transition-transform duration-300" />
+                    </>
+                  )}
+                </span>
               </button>
             </div>
           </form>

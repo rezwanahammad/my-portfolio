@@ -24,8 +24,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <></>
         </BackgroundLines>
         {children}
+        <Footer />
       </body>
-      <Footer />
     </html>
   );
 }

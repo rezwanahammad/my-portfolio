@@ -47,16 +47,16 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="max-w-7xl ml-37 p-6 mt-20 rounded-xl shadow-lg text-white"
+      className="max-w-7xl mx-auto p-6 mt-20 mb-20 rounded-xl shadow-lg text-white"
     >
       <h2 className="text-5xl font-semibold mb-12 text-center bg-gradient-to-r from-[#7FFFD4] via-[#40E0D0] to-[#20B2AA] bg-clip-text text-transparent">
         Projects
       </h2>
-      <p className="text-center text-lg mb-12">
+      <p className="text-center text-lg mb-16">
         Here are some of the projects I have worked on recently:
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-32 py-10">
         {error && <div className="text-red-400">{error}</div>}
 
         {!projects && !error && <div className="text-center">Loading...</div>}

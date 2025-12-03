@@ -58,15 +58,17 @@ export default function Navbar() {
       {/* Desktop sidebar */}
       <div className="fixed top-1/2 left-4 transform -translate-y-1/2 flex-col pl-2 text-xl space-y-5 hidden md:flex">
         {navItems.map((item, index) => (
-          <Link href={item.href} key={index} legacyBehavior>
-            <a className="group flex items-center space-x-2">
-              {React.cloneElement(item.icon, {
-                className: `${item.icon.props.className} cursor-pointer hover:text-[#20B2AA]`,
-              })}
-              <span className="opacity-0 group-hover:opacity-100 transition text-md">
-                {item.label}
-              </span>
-            </a>
+          <Link
+            href={item.href}
+            key={index}
+            className="group flex items-center space-x-2"
+          >
+            {React.cloneElement(item.icon, {
+              className: `${item.icon.props.className} cursor-pointer hover:text-[#20B2AA]`,
+            })}
+            <span className="opacity-0 group-hover:opacity-100 transition text-md">
+              {item.label}
+            </span>
           </Link>
         ))}
       </div>
@@ -86,14 +88,14 @@ export default function Navbar() {
       {isOpen && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-40 flex flex-col items-center justify-center space-y-8 text-2xl">
           {navItems.map((item, index) => (
-            <Link href={item.href} key={index} legacyBehavior>
-              <a
-                onClick={() => setIsOpen(false)}
-                className="flex items-center space-x-3 hover:text-[#20B2AA] transition"
-              >
-                {item.icon}
-                <span>{item.label}</span>
-              </a>
+            <Link
+              href={item.href}
+              key={index}
+              onClick={() => setIsOpen(false)}
+              className="flex items-center space-x-3 hover:text-[#20B2AA] transition"
+            >
+              {item.icon}
+              <span>{item.label}</span>
             </Link>
           ))}
         </div>
